@@ -1,0 +1,21 @@
+---
+
+- name: Copy Docker Engine
+  copy: src={{ item }} dest=/usr/bin owner=root mode=700
+  with_items:
+    - docker
+    - docker-containerd
+    - docker-containerd-ctr
+    - docker-containerd-shim
+    - docker-proxy
+    - docker-runc
+    - dockerd
+
+- name: Copy Docker Service file
+  template: src=docker.j2 dest=/usr/lib/systemd/system/docker.service
+  notify:
+    - reload systemd
+    - docker start service
+
+- name: Enable docker
+  service: name=docker enabled=yes
