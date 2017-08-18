@@ -171,6 +171,7 @@ galaxy_info:
   #  - 6
     - 7
   - name: CentOS
+    versions:
     - 7.0
 	- 7.2
 	- 7.3
