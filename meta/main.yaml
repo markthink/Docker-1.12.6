@@ -31,7 +31,7 @@ galaxy_info:
   # the ones that apply to your role. If you don't see your
   # platform on this list, let us know and we'll get it added!
   #
-  #platforms:
+  platforms:
   #- name: OpenBSD
   #  versions:
   #  - all
@@ -41,9 +41,9 @@ galaxy_info:
   #  - 5.9
   #  - 6.0
   #  - 6.1
-  #- name: Fedora
-  #  versions:
-  #  - all
+  - name: Fedora
+    versions:
+    - all
   #  - 16
   #  - 17
   #  - 18
@@ -164,12 +164,16 @@ galaxy_info:
   #  versions:
   #  - all
   #  - any
-  #- name: EL
-  #  versions:
-  #  - all
+  - name: EL
+    versions:
+    - all
   #  - 5
   #  - 6
-  #  - 7
+    - 7
+  - name: CentOS
+    - 7.0
+	- 7.2
+	- 7.3
   #- name: Windows
   #  versions:
   #  - all
