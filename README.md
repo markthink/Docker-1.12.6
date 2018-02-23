@@ -45,20 +45,37 @@ site.yaml
 ```
 ➜  ansiblePlay tree -L 3
 .
-├── ansible.cfg
-├── hosts
-├── roles
-│   └── docker
-│       ├── README.md
-│       ├── files
-│       ├── handlers
-│       ├── tasks
-│       └── templates
-└── site.yaml
+├── README.md
+├── defaults
+│   └── main.yml
+├── files
+│   ├── docker
+│   ├── docker-containerd
+│   ├── docker-containerd-ctr
+│   ├── docker-containerd-shim
+│   ├── docker-proxy
+│   ├── docker-runc
+│   └── dockerd
+├── handlers
+│   └── main.yaml
+├── meta
+│   └── main.yaml
+├── tasks
+│   └── main.yaml
+├── templates
+│   └── docker.j2
+├── tests
+│   ├── inventory
+│   ├── roles
+│   │   └── docker -> ../../
+│   ├── test.retry
+│   └── test.yml
+└── vars
+    └── main.yml
 ```
 
 ```
-ansibe_playbook site.yaml
+ansibe_playbook ./tests/test.yml
 ```
 
 ## License
