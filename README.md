@@ -1,5 +1,7 @@
 # Docker-1.12.6 Deploy
 
+测试 bot
+
 Docker 容器引擎从 1.13 版本开始内置了 swarm 容器调度引擎，因此最新版本的 Kubernetes 目前只支持到Docker 1.12版本。
 
 ## 配置 ansible.cfg
